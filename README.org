@@ -32,7 +32,7 @@ mv rofi-scripts/ ~
 #+BEGIN_SRC sh
 bash ~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
 #+END_SRC
-- Step 5: The installation has been done, now just press the shortcut key you assigned for the command above. You can now delete the cloned =rofi-scripts-collection= folder.
+- Step 5: The installation has been done, now just press the shortcut key you assigned for the command above. You can now delete the cloned =rofi-scripts-collection= folder. To add more scripts, just put them in the =rofi-scripts= folder.
 * Notes
 If your system runs FISH shell by default, use this shortcuts for Step 4:
 #+BEGIN_SRC sh
