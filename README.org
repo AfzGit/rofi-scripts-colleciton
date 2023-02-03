@@ -34,7 +34,7 @@ chmod 755 -R rofi-scripts-collection/rofi-scripts/
 mv rofi-scripts-collection/rofi-scripts/ ~
 
 # Removing uneeded files
-rm -r rofi-scripts-collection/
+rm -rf rofi-scripts-collection/
 #+END_SRC
 
 - Step 4: Now add the shortcut to trigger rofi in your system settings (Check your desktop Environment's custom shortcuts settings)
