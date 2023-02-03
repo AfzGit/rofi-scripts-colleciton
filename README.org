@@ -22,8 +22,6 @@ Rofi Script Collection is a combination of scripts and their execution using a t
 - Step 2: Clone the repository and go into it
 #+BEGIN_SRC sh
 git clone https://github.com/AfzGit/rofi-scripts-colleciton
-cd rofi-scripts/
-rm README.ORG LICENSE
 #+END_SRC
 - Step 3: Place the =rofi-scripts= folder wherever you want
 #+BEGIN_SRC sh
@@ -32,7 +30,7 @@ mv rofi-scripts/ ~
 #+END_SRC
 - Step 4: Now add the shortcut to trigger rofi in your system settings (Check your desktop Environment's custom shortcuts settings)
 #+BEGIN_SRC sh
-~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
+bash ~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
 #+END_SRC
 * Notes
 If your system runs FISH shell by default, use this shortcuts for Step 4:
