@@ -27,10 +27,14 @@ git clone https://github.com/AfzGit/rofi-scripts-collection
 
 - Step 3: Place the =rofi-scripts= folder wherever you want and give it execution permissions recursively.
 #+BEGIN_SRC sh
+# granting execution permission to the scripts in the folder
+chmod 755 -R rofi-scripts-collection/rofi-scripts/
+
 # Placing in home folder
 mv rofi-scripts-collection/rofi-scripts/ ~
+
+# Removing uneeded files
 rm -r rofi-scripts-collection/
-chmod 755 -R rofi-scripts/
 #+END_SRC
 
 - Step 4: Now add the shortcut to trigger rofi in your system settings (Check your desktop Environment's custom shortcuts settings)
