@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# -------------------
+# |     CONFIG      |
+# -------------------
+
+# default browser 
+browser=firefox
+
+# -------------------
+# |     SCRIPT      |
+# -------------------
+
+# scan for open ports
+openports=$(nmap -p 1-65535 -T5 -v localhost | grep -e 'Discovered' | awk -F/ '{print $1}' | awk '{print $4}')
+
+# show open ports
+echo "$openports"
+porton=$(echo "$openports" | rofi -dmenu -i -p 'Ports')
+
+# exit when rofi empty
+if [[ -z $porton ]]; then
+    exit
+fi
+
+# open with browser
+$browser http://$chooseip:$porton

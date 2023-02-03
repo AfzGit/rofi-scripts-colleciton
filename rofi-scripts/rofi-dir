@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# -----------------
+# |    CUSTOM     |
+# -----------------
+cd ~
+lsbin=/usr/bin/ls
+
+# -----------------
+# |    SCRIPT     |
+# -----------------
+# rofi shows home dir
+# rofi will cd until file is encountered
+while :;
+do
+    selection=$($lsbin -1 -a $(pwd) | rofi -scroll-method 1 -dmenu -i -p "Select")
+
+    # if top entered then open file manager (loop)
+    if [[ -d "$selection" ]]; then
+        cd $selection
+
+    # open default file manager
+    elif [[ "$selection" = "dd" ]]; then
+        xdg-open . &
+        exit
+
+    # go back
+    elif [[ "$selection" = ".." ]]; then
+        cd ..
+
+    # if canceled
+    elif [[ -z "$selection" ]]; then
+        exit
+
+    # file selected
+    else
+        xdg-open "$selection"
+        exit
+    fi
+
+done

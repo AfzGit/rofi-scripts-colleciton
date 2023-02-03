@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# -----------------
+# |    SCRIPT     |
+# -----------------
+# get name
+name=$(ps -A --sort -pcpu | grep -v $exclude | choose 3 | rofi -scroll-method 1 -dmenu -i -p "Kill")
+
+if [[ -z "$name" ]]; then
+    exit
+fi
+
+# notify
+# notify-send "Killing process..."
+echo "Killing $name"
+
+# get process number to kill
+proc=$(ps -A | grep $name | choose 0)
+kill $proc
