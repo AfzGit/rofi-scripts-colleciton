@@ -39,12 +39,12 @@ rm -rf rofi-scripts-collection/
 
 - Step 4: Now add the shortcut to trigger rofi in your system settings (Check your desktop Environment's custom shortcuts settings)
 #+BEGIN_SRC sh
-bash ~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
+sh ~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
 #+END_SRC
 
 - Step 5: The installation has been done, now just press the shortcut key you assigned for the command above. To add more scripts, just put them in the =rofi-scripts= folder.
 * Notes
 If your system runs FISH shell by default, use this shortcut instead for Step 4:
 #+BEGIN_SRC sh
-set -x selected (ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:") && bash ~/rofi-scripts/$selected
+set -x selected (ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:") && sh ~/rofi-scripts/$selected
 #+END_SRC
