@@ -28,7 +28,8 @@ git clone https://github.com/AfzGit/rofi-scripts-collection
 - Step 3: Place the =rofi-scripts= folder wherever you want and give it execution permissions recursively.
 #+BEGIN_SRC sh
 # Placing in home folder
-mv rofi-scripts/ ~
+mv rofi-scripts-collection/rofi-scripts/ ~
+rm -r rofi-scripts-collection/
 chmod 755 -R rofi-scripts/
 #+END_SRC
 
@@ -37,7 +38,7 @@ chmod 755 -R rofi-scripts/
 bash ~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
 #+END_SRC
 
-- Step 5: The installation has been done, now just press the shortcut key you assigned for the command above. You can now delete the cloned =rofi-scripts-collection= folder. To add more scripts, just put them in the =rofi-scripts= folder.
+- Step 5: The installation has been done, now just press the shortcut key you assigned for the command above. To add more scripts, just put them in the =rofi-scripts= folder.
 * Notes
 If your system runs FISH shell by default, use this shortcut instead for Step 4:
 #+BEGIN_SRC sh
