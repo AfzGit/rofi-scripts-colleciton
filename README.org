@@ -1,1 +1,41 @@
-* test
+* About
+Rofi Script Collection is a combination of scripts and their execution using a tool called rofi. Rofi provides the user with prompt asking for the script the user wants to execute.
+* Requirements
+- =rofi=
+  - Debian (Ubuntu, Mint etc)
+    - =sudo apt install rofi=
+  - Arch
+    - =sudo pacman -S rofi=
+  - Fedora
+    - =sudo dnf install rofi=
+  - [[https://search.nixos.org/packages?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=rofi][Nix]]
+- =git=
+  - Debian (Ubuntu, Mint etc)
+    - =sudo apt install git=
+  - Arch
+    - =sudo pacman -S git=
+  - Fedora
+    - =sudo dnf install git=
+  - [[https://search.nixos.org/packages?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=git][Nix]]
+* Installation
+- Step 1: Install =rofi= and =git=
+- Step 2: Clone the repository and go into it
+#+BEGIN_SRC sh
+git clone https://github.com/AfzGit/rofi-scripts-colleciton
+cd rofi-scripts/
+rm README.ORG LICENSE
+#+END_SRC
+- Step 3: Place the =rofi-scripts= folder wherever you want
+#+BEGIN_SRC sh
+# Placing in home folder
+mv rofi-scripts/ ~
+#+END_SRC
+- Step 4: Now add the shortcut to trigger rofi in your system settings (Check your desktop Environment's custom shortcuts settings)
+#+BEGIN_SRC sh
+~/rofi-scripts/$(ls -1 ~/rofi-scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:")
+#+END_SRC
+* Notes
+If your system runs FISH shell by default, use this shortcuts for Step 4:
+#+BEGIN_SRC sh
+set -x selected (/usr/bin/ls -1 ~/Other/scripts/ | rofi -scroll-method 1 -dmenu -i -p "Run:") && bash ~/Other/scripts/$selected
+#+END_SRC
