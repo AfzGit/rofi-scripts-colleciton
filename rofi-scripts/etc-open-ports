@@ -24,4 +24,4 @@ if [[ -z $porton ]]; then
 fi
 
 # open with browser
-$browser http://$chooseip:$porton
+$browser http://localhost:$porton
