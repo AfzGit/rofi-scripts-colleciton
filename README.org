@@ -18,9 +18,9 @@ Rofi Script Collection is a collection of scripts and their execution using a to
     - =sudo dnf install git=
   - [[https://search.nixos.org/packages?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=git][Nix]]
 * Installation
-- Step 1: Install =rofi= and =git=
+- Step 1: Install =rofi= and =git= (See [[*Requirements][Requirements]])
 
-- Step 2: Clone the repository and go into it
+- Step 2: Clone the repository
 #+BEGIN_SRC sh
 git clone https://github.com/AfzGit/rofi-scripts-collection
 #+END_SRC
